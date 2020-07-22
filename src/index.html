@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <!--Esta línea lo convierte en responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SecureTalk</title>
     <link rel="stylesheet" href="style.css" />
+    <!--Para agregar ícono en la pestaña del navegador-->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
   </head>
+
+
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+    <div id="root"></div>
+
+    <div id="firstscreen" class="display screen">
+
+      <div class="header">
+        <h1>SecureTalk</h1>
+      </div>
+
+      <div id="maincontent" class="content">
+        <h2>¡Bienvenid@!</h2>
+        <p>En SecureTalk valoramos tu privacidad. <br> 
+          Para ello garantizamos mantener seguras tus conversaciones a través del intercambio de <strong>mensajes codificados</strong> con tus contactos.
+        </p>
+        <form>
+        <input type="button" id="enjoybutton" class="button" value="Disfrutar SecureTalk">
+        </form>
+      </div>
+
     </div>
+
+
+    <div id="secondscreen" class="screen">
+
+      <div class="header">
+        <h1>SecureTalk</h1>
+      </div>
+
+      <div id="codingcontent" class="content">
+        <textarea id="outputtexthtml" class="box" placeholder="Aquí aparecerá tu mensaje codificado" disabled></textarea><br>
+        <div id="leftbox">
+          <textarea id="entertexthtml" class="box" placeholder="Ingresa tu mensaje" spellcheck="false" required></textarea>
+        </div>
+        <div id="rightbuttons">
+          <form>
+          <input type="number" min="1" id="offset" placeholder="Elige tu clave" required>
+          <input type="button" id="encodebutton" class="encodeco button" value="CODIFICAR">
+          <input type="button" id="decodebutton" class="encodeco button" value="DECODIFICAR">
+          <a title="Enviar por WhatsApp" href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsappicon.jpg" width="20" height="20" /></a>
+          <a title="Enviar por Messenger" href="https://www.messenger.com/" target="_blank"><img src="images/messengericon.jpg" width="20" height="20" /></a>
+          <a title="Enviar por Instagram" href="https://www.instagram.com/direct/inbox/" target="_blank"><img src="images/instagramicon.jpg" width="20" height="20" /></a>
+          <a title="Enviar por Gmail" href="mailto:user@gmail.com?Subject=Mensaje%20codificado%20de%20SecureTalk" target="_blank"><img src="images/gmailicon.jpg" width="20" height="20"/></a>
+        </form>
+        </div> <br>
+        <input type="button" class="button" value="Restaurar" id="restorebutton">
+       </div>
+    </div>
+
     <script src="index.js" type="module"></script>
+
   </body>
 </html>
