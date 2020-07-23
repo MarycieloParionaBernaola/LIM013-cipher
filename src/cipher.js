@@ -10,7 +10,7 @@ const cipher = {
       } else if (convAscii >= 97 && convAscii <= 122) {
         newText += String.fromCharCode((convAscii - 97 + parseInt(offset)) % 26 + 97); // Minus Ascii: 97 - 122
       } else {                            
-        newText += string[i];       // concateno los números, signos, espacios y caracteres especiales
+        newText += string[i];       
       }
     }
     return newText;
@@ -26,7 +26,7 @@ const cipher = {
       } else if (convAscii >= 97 && convAscii <= 122) {
         newText += String.fromCharCode((convAscii - 122 - parseInt(offset)) % 26 + 122); // Minus Ascii: 97 - 122
       } else {                            
-        newText += string[i];       // concateno los números, signos, espacios y caracteres especiales
+        newText += string[i];       
       }
     }
     return newText;
