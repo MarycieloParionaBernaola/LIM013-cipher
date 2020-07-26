@@ -6,7 +6,7 @@
     <!--Esta línea lo convierte en responsive-->
     <meta name="viewport" content="width=device-width">
     <title>SecureTalk</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <!--Para agregar ícono en la pestaña del navegador-->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
   </head>
@@ -20,63 +20,63 @@
         <h1>SecureTalk</h1>
       </div>
 
-      <div id="maincontent" class="content">
+      <div class="main content">
         <h2>¡Bienvenid@ a SecureTalk!</h2> 
         <p>En SecureTalk podrás mantener seguras tus conversaciones a través del intercambio de <strong>mensajes codificados</strong> con tus contactos.</p>
         <h3>¿Cómo funciona?</h3>
-        <table align="center" style="text-align: justify;">
+        <table align="center" class="justify">
           <tr>
-            <td><input type="number" class="key center" value="33" readonly></td>
+            <td><input type="number" class="key smallk" value="33" readonly></td>
             <td>Ingresa una clave</td>    
           </tr>
           <tr>
-            <td><img class="encodeco encode center" src="images/lockclosed.jpg" height="30px"></td>        
+            <td><img class="mainbtn encode" src="images/encode-button.jpg" height="30px"></td>        
             <td>Codifica</td>
           </tr>
           <tr>
-            <td><img class="encodeco decode center" src="images/lockopen.jpg" height="30px"></td>        
+            <td><img class="mainbtn decode" src="images/decode-button.jpg" height="30px"></td>        
             <td>Decodifica</td>
           </tr>
           <tr>
-            <td><img class="encodeco clean center" src="images/clean.jpg" height="30px"></td>
+            <td><img class="mainbtn clean" src="images/clean-button.jpg" height="30px"></td>
             <td>Limpia</td>
           </tr>
         </table>
-       <p>🔰<strong>Recuerda</strong> compartir la clave con tu contacto y para mayor seguridad <strong>usa letras</strong>.</p>
-       <input type="button" id="enjoybutton" class="enjoy button" value="Disfrutar SecureTalk">
+        <p>🔰<strong>Recuerda</strong> compartir la clave con tu contacto y para mayor seguridad <strong>usa letras</strong>.</p>
+        <input type="button" id="enjoybutton" class="enjoy btn" value="Disfrutar SecureTalk">
       </div>
     </div>
 
 
-    <div id="secondscreen" class="screen">
+    <div id="secondscreen" class="second screen">
 
       <div class="header">
         <h1>SecureTalk</h1>
       </div>
 
-      <div id="codingcontent" class="content">
+      <div class="content">
         <div class="leftbox">
-          <textarea id="outputtext" class="box" placeholder="Aquí aparecerá el resultado" readonly></textarea><br>
+          <textarea id="outputtext" class="box" placeholder="Aquí aparecerá tu mensaje transformado." readonly></textarea><br>
         </div>
-        <div class="rightbuttons">
+        <div class="right">
           <form>
-          <a id="sendwhatsapp" title="Enviar por WhatsApp" target="_blank"><img class="socialmedia" src="images/whatsappicon.jpg" width="40" height="40" /></a>
-          <a title="Enviar por Gmail" href="mailto:user@gmail.com?Subject=Mensaje%20codificado%20de%20SecureTalk" target="_blank"><img class="socialmedia" src="images/gmailicon4.jpg" width="40" height="40"/></a>
+          <a id="sendwhatsapp" title="Enviar por WhatsApp" target="_blank"><img class="socialmedia btn margin" src="images/whatsapp-icon.jpg"/></a>
+          <a title="Enviar por Gmail" href="mailto:user@gmail.com?Subject=Mensaje%20codificado%20de%20SecureTalk" target="_blank"><img class="socialmedia btn margin" src="images/gmail-icon.jpg"/></a>
           </form>
         </div>
         
         <div class="leftbox">
-          <textarea id="entertext" class="box" placeholder="Ingresa tu mensaje" spellcheck="false"></textarea>
+          <textarea id="entertext" class="box" placeholder="Ingresa tu mensaje :)" spellcheck="false"></textarea>
         </div>
-        <div class="rightbuttons">
+        <div class="right">
           <form>
-          <input type="number" id="key" class="key center" min="1">
-          <button type="button" id="encodebutton" class="encodeco button encode" title="Codificar"><img src="images/lockclosed.jpg" height="30px"></button>
-          <button type="button" id="decodebutton" class="encodeco button decode" title="Decodificar"><img src="images/lockopen.jpg" height="30px"></button>
-          <button type="button" id="cleanbutton" class="encodeco button clean" title="Limpiar"><img src="images/clean.jpg" height="30px"></button>
+          <input type="number" id="key" class="key bigk margin" min="1" autocomplete="off">
+          <button type="button" id="encodebutton" class="mainbtn btn encode margin" title="Codificar"><img src="images/encode-button.jpg" height="33px"></button>
+          <button type="button" id="decodebutton" class="mainbtn btn decode margin" title="Decodificar"><img src="images/decode-button.jpg" height="33px"></button>
+          <button type="button" id="cleanbutton" class="mainbtn btn clean margin" title="Limpiar"><img src="images/clean-button.jpg" height="33px"></button>
           </form>
         </div>
-        <p>Si deseas comunicarte con la desarrolladora, <a href="https://api.whatsapp.com/send?phone=51963069594&text=¡Hola%20Marycielo!%20Estoy%20interesad@%20en%20tu%20web%20app%20:)." target="_blank">click aquí</a>.</p>        
+        <p>Si deseas comunicarte con la desarrolladora, <a href="https://api.whatsapp.com/send?phone=51963069594&text=¡Hola%20Marycielo!%20Estoy%20interesad@%20en%20tu%20web%20app%20:)." target="_blank">click aquí</a>.</p>      
       </div>
     </div>
 
