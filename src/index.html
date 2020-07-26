@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <!--Esta línea lo convierte en responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <title>SecureTalk</title>
     <link rel="stylesheet" href="style.css" />
     <!--Para agregar ícono en la pestaña del navegador-->
@@ -13,8 +13,7 @@
 
 
   <body>
-    <div id="root"></div>
-
+    
     <div id="firstscreen" class="display screen">
 
       <div class="header">
@@ -22,15 +21,30 @@
       </div>
 
       <div id="maincontent" class="content">
-        <h2>¡Bienvenid@!</h2>
-        <p>En SecureTalk valoramos tu privacidad. <br> 
-          Para ello garantizamos mantener seguras tus conversaciones a través del intercambio de <strong>mensajes codificados</strong> con tus contactos.
-        </p>
-        <form>
-        <input type="button" id="enjoybutton" class="button" value="Disfrutar SecureTalk">
-        </form>
+        <h2>¡Bienvenid@ a SecureTalk!</h2> 
+        <p>En SecureTalk podrás mantener seguras tus conversaciones a través del intercambio de <strong>mensajes codificados</strong> con tus contactos.</p>
+        <h3>¿Cómo funciona?</h3>
+        <table align="center" style="text-align: justify;">
+          <tr>
+            <td><input type="number" class="key center" value="33" readonly></td>
+            <td>Ingresa una clave</td>    
+          </tr>
+          <tr>
+            <td><img class="encodeco encode center" src="images/lockclosed.jpg" height="30px"></td>        
+            <td>Codifica</td>
+          </tr>
+          <tr>
+            <td><img class="encodeco decode center" src="images/lockopen.jpg" height="30px"></td>        
+            <td>Decodifica</td>
+          </tr>
+          <tr>
+            <td><img class="encodeco clean center" src="images/clean.jpg" height="30px"></td>
+            <td>Limpia</td>
+          </tr>
+        </table>
+       <p>🔰<strong>Recuerda</strong> compartir la clave con tu contacto y para mayor seguridad <strong>usa letras</strong>.</p>
+       <input type="button" id="enjoybutton" class="enjoy button" value="Disfrutar SecureTalk">
       </div>
-
     </div>
 
 
@@ -41,23 +55,29 @@
       </div>
 
       <div id="codingcontent" class="content">
-        <textarea id="outputtexthtml" class="box" placeholder="Aquí aparecerá tu mensaje codificado" disabled></textarea><br>
-        <div id="leftbox">
-          <textarea id="entertexthtml" class="box" placeholder="Ingresa tu mensaje" spellcheck="false" required></textarea>
+        <div class="leftbox">
+          <textarea id="outputtext" class="box" placeholder="Aquí aparecerá el resultado" readonly></textarea><br>
         </div>
-        <div id="rightbuttons">
+        <div class="rightbuttons">
           <form>
-          <input type="number" min="1" id="offset" placeholder="Elige tu clave" required>
-          <input type="button" id="encodebutton" class="encodeco button" value="CODIFICAR">
-          <input type="button" id="decodebutton" class="encodeco button" value="DECODIFICAR">
-          <a title="Enviar por WhatsApp" href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsappicon.jpg" width="20" height="20" /></a>
-          <a title="Enviar por Messenger" href="https://www.messenger.com/" target="_blank"><img src="images/messengericon.jpg" width="20" height="20" /></a>
-          <a title="Enviar por Instagram" href="https://www.instagram.com/direct/inbox/" target="_blank"><img src="images/instagramicon.jpg" width="20" height="20" /></a>
-          <a title="Enviar por Gmail" href="mailto:user@gmail.com?Subject=Mensaje%20codificado%20de%20SecureTalk" target="_blank"><img src="images/gmailicon.jpg" width="20" height="20"/></a>
-        </form>
-        </div> <br>
-        <input type="button" class="button" value="Restaurar" id="restorebutton">
-       </div>
+          <a id="sendwhatsapp" title="Enviar por WhatsApp" target="_blank"><img class="socialmedia" src="images/whatsappicon.jpg" width="40" height="40" /></a>
+          <a title="Enviar por Gmail" href="mailto:user@gmail.com?Subject=Mensaje%20codificado%20de%20SecureTalk" target="_blank"><img class="socialmedia" src="images/gmailicon4.jpg" width="40" height="40"/></a>
+          </form>
+        </div>
+        
+        <div class="leftbox">
+          <textarea id="entertext" class="box" placeholder="Ingresa tu mensaje" spellcheck="false"></textarea>
+        </div>
+        <div class="rightbuttons">
+          <form>
+          <input type="number" id="key" class="key center" min="1">
+          <button type="button" id="encodebutton" class="encodeco button encode" title="Codificar"><img src="images/lockclosed.jpg" height="30px"></button>
+          <button type="button" id="decodebutton" class="encodeco button decode" title="Decodificar"><img src="images/lockopen.jpg" height="30px"></button>
+          <button type="button" id="cleanbutton" class="encodeco button clean" title="Limpiar"><img src="images/clean.jpg" height="30px"></button>
+          </form>
+        </div>
+        <p>Si deseas comunicarte con la desarrolladora, <a href="https://api.whatsapp.com/send?phone=51963069594&text=¡Hola%20Marycielo!%20Estoy%20interesad@%20en%20tu%20web%20app%20:)." target="_blank">click aquí</a>.</p>        
+      </div>
     </div>
 
     <script src="index.js" type="module"></script>

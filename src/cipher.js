@@ -1,6 +1,5 @@
-const cipher = {
-
-  encode: function (offset, string) {
+const cipher ={
+  encode: (offset, string) => {
     let newText = '';
     for (let i = 0; i < string.length; i++) {
       let convAscii = string.charCodeAt(i);
@@ -16,7 +15,7 @@ const cipher = {
     return newText;
   },
 
-  decode: function (offset, string) {
+  decode: (offset, string) => {
     let newText = '';
     for (let i = 0; i < string.length; i++) {
       let convAscii = string.charCodeAt(i);
@@ -31,9 +30,9 @@ const cipher = {
     }
     return newText;
   },
-   
-};
 
+
+};
+   
 
 export default cipher;
-

@@ -1,11 +1,10 @@
-
 /*colocar agradecimientos y url del background*/
 body {
-    background:url(images/privacy.jpg) no-repeat center center fixed;
-    background-attachment: fixed;
-    background-position: center;
+    background:url(images/security4.jpg) center fixed;
     background-size: cover;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*background-color: rgb(248, 221, 65);*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
 }
 
 
@@ -15,16 +14,15 @@ body {
 .screen {
     width: 600px;  
     margin: auto;
-    margin-top: 40px;
-
+    align-items: center;
 }
 
 
 .content {
-    background: rgba(245, 245, 245, 1);
+    background: rgb(251, 252, 193, 1); 
+    height: 630px;
     color: black; 
-    height: 315px;
-    position: relative; top: -37px;
+    position: relative; top: -39px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; 
     text-align: center;
@@ -32,24 +30,22 @@ body {
     padding-bottom: 20px;
 }
 
-
 .header {
-    background: #33c09f;
-    color: white;  
-    font-size: 1.7em;
+    background: rgb(236, 98, 6);
+    color: white; 
+    font-size: 1.8em;
     font-weight: 0;
     text-align: left;
     padding-left: 20px;
     position:static; 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px; 
+      
 }
 
 
 .button {
-    color: #fff;
     margin: 0.2em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     outline: none;
     transition-duration: 0.4s; 
     justify-content: center; 
@@ -57,30 +53,31 @@ body {
 }
 
 .button:hover {
-    background-color: #FF5050;
+    background-color:rgb(6, 209, 236);
     cursor: pointer;    
 }
 
 .encodeco {
-    background-color: rgb(139, 231, 208);
     display:block; 
-    font-size: 1em;
-    border-radius: 5px;
+    border-radius: 50px;
+    padding: 5px;
 }
 
 
 .box {
-    background-color:rgb(255, 248, 143);
+    background-color: white;
     color: black;
     vertical-align: middle;
-    margin:0.5em; 
-    height: 80px;
+    height: 210px;
     border-radius: 20px;
     outline: none;
-    font-size: 1.3em;
+    font-size: 20px;
     border:none; 
     resize: none;
     padding: 20px;
+    width: 460px;
+    margin:0.5em; 
+    margin-bottom: 1em;
 }
 
 .box::-webkit-input-placeholder {
@@ -99,8 +96,8 @@ body {
 }
 
 
-#enjoybutton {
-    background-color: #fccd40;
+.enjoy {
+    background-color: rgb(6, 126, 182);
     display: flex;
     align-items: center;
     margin:auto;
@@ -108,10 +105,12 @@ body {
     font-size: 1em;
     padding: 10px;
     border-radius: 13px;
+    color: white; 
+    font-weight:bold;
 }
 
-#enjoybutton:hover {
-    background-color: #FF5050;
+.enjoy:hover {
+    background-color: rgb(6, 209, 236);
     cursor: pointer;    
 }
 
@@ -124,56 +123,61 @@ body {
 }
 
 
-#outputtexthtml {
-    width: 500px; 
-}
-
-
-#leftbox {
+.leftbox {
     display:inline-block; 
-    }
-
-#entertexthtml {
-    width: 378px;
 }
 
 
-#rightbuttons {
+.rightbuttons {
     display:inline-block; 
     vertical-align: middle;
     align-items: center;
 }
 
-#offset {
+.key {
     display:block; 
-    width: 100px; 
+    width: 33px; 
     height: 25px;
     border-radius: 5px;
     outline: none;
-    border:none; 
+    border: 1px solid rgb(6, 126, 182);
     text-align: center;
-    margin-bottom: 0.5em;
-    padding-left: 0.5em;
+    font-size: 15px;
+    margin:0; 
 }
 
-#encodebutton {
-    width: 105px;
+.key::-webkit-inner-spin-button, 
+.key::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
-
-#restorebutton {
-    background-color: rgb(97, 221, 190);
-    font-size: 1.3em;
-    border-radius: 10px;
-    padding:7px; 
+.clean {
+    background-color: rgb(240, 228, 66);
 }
 
-#restorebutton:hover {
+.encode {
+    background-color:rgb(67, 182, 128);
+}
+
+.decode {
     background-color: #FF5050;
-    cursor: pointer;    
 }
 
+.socialmedia {
+    display:block; 
+    margin: 0.2em;
+    outline: none;
+    transition-duration: 0.4s; 
+    justify-content: center; 
+    border: none;
+    border-radius: 20px;
 
+}
 
-
-
+.center {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    vertical-align: center;
+}
