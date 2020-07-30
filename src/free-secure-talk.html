@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <!--Esta línea lo convierte en responsive-->
+    <meta name="viewport" content="width=device-width">
+    <title>SecureTalk</title>
+    <link rel="stylesheet" href="style.css"/>
+    <!--Para agregar ícono en la pestaña del navegador-->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  </head>
+
+
+  <body>
+
+ <div class="screen">
+
+    <div class="header">
+      <h1>SecureTalk</h1>
+    </div>
+
+    <div class="content">
+      <a href="plus-secure-talk.html" title="Prueba PLUS" class="plus linkbtn bluebtn btn">Prueba PLUS</a>
+      <div class="leftbox">
+        <textarea id="entertext" class="box btop" placeholder="Ingresa tu mensaje y coloca tu clave (1-10)" spellcheck="false"></textarea>
+      </div>
+      <div class="right">
+        <form>
+        <input type="number" id="key" class="key bigk margin" min="1" max="10" autocomplete="off">
+        <button type="button" id="encodebutton" class="mainbtn btn encode margin" title="Ocultar mensaje"><img src="images/encode-button.jpg" height="33px"></button>
+        <button type="button" id="decodebutton" class="mainbtn btn decode margin" title="Mostrar mensaje"><img src="images/decode-button.jpg" height="33px"></button>
+        <button type="button" id="restorebutton" class="mainbtn btn restore margin" title="Reiniciar"><img src="images/restore-button.jpg" height="33px"></button>
+        </form>
+      </div>
+
+      <div class="leftbox">
+        <textarea id="outputtext" class="box bbot" placeholder="Aquí aparecerá tu mensaje convertido" readonly></textarea><br>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="free.js" type="module"></script>
+  
+
+</body>
+</html>
