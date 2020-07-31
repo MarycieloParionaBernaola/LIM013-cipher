@@ -23,11 +23,12 @@ body {
 }
 
 
-h1 {
+header {
     font-size: 3em;
     display:inline-block; 
     margin: auto; 
     padding-left: 20px; 
+    font-weight: bold;
 }
 
 .login {
@@ -243,3 +244,4 @@ a {
 #plusscreen {
     display: none; 
 }
+
