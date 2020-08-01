@@ -5,6 +5,12 @@ body {
     margin: auto;
 }
 
+.dark{
+    background-color: black;
+    color: white; 
+    margin: auto; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .screen {
     width: 600px;  
@@ -56,6 +62,10 @@ header {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    --color-green: rgb(67, 182, 128);
+    --color-yellow: #FFC000;
+    --color-button: #fdffff;
+    --color-grey: grey;
 }
 
 
@@ -245,3 +255,36 @@ a {
     display: none; 
 }
 
+.switch-button {
+    display: inline-block;
+    margin-left: 430px;
+    margin-top: 10px; 
+}
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+.switch-button .switch-button__label {
+    background-color: var(--color-yellow);
+    width: 4rem;
+    height: 2rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-grey);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: var(--color-green);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(2rem);
+}

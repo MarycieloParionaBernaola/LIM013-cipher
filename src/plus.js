@@ -8,7 +8,7 @@ const enjoyButton = document.getElementById("enjoybutton");
 enjoyButton.addEventListener('click', () => {
     const user = document.getElementById('user').value;
     const password = document.getElementById('password').value;
-    if(user === "marycielo" && password === "inuyasha"){
+    if(user === "user" && password === "user"){
     document.getElementById("loginscreen").style.display = "none";
     document.getElementById("plusscreen").style.display = "block";
     } else {
@@ -60,3 +60,13 @@ window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(message))
 })
 
 
+//Cambiar imagen login
+const switchButton = document.getElementById("switch-label");
+switchButton.addEventListener('click', () => {
+    const image = document.getElementById("imagelogin");
+    if(image.src.match("boy")){
+        image.src="images/girlavatar.jpg";
+    } else {
+        image.src="images/boyavatar.jpg";
+    }
+})

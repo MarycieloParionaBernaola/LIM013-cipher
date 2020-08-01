@@ -22,7 +22,7 @@ const decodeButton = document.getElementById("decodebutton");
 decodeButton.addEventListener('click', () => {
     const keyValue = document.getElementById("key").value;
     const enterTextValue = document.getElementById("entertext").value;
-    if(keyValue<1 || keyValue>25 || keyValue === 0 || keyValue === null || enterTextValue ==='' || /^\s*$/.test(enterTextValue)) { 
+    if(keyValue<1 || keyValue>10 || keyValue === 0 || keyValue === null || enterTextValue ==='' || /^\s*$/.test(enterTextValue)) { 
         alert("¡Recuerde ingresar su mensaje y clave correcta! :)");
     } else {
         document.getElementById("outputtext").innerHTML=cipher.decode(keyValue,enterTextValue);
