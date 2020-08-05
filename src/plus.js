@@ -3,6 +3,7 @@ import cipher from './cipher.js';
 // eslint-disable-next-line no-console
 console.log(cipher);
 
+
 //Botón disfrutar
 const enjoyButton = document.getElementById("enjoybutton");
 enjoyButton.addEventListener('click', () => {
@@ -23,11 +24,12 @@ encodeButton.addEventListener('click', () => {
     const keyValue = document.getElementById("key").value;
     const enterTextValue = document.getElementById("entertext").value;
     if(keyValue<1 || keyValue>25 || keyValue === 0 || keyValue === null || enterTextValue ==='' || /^\s*$/.test(enterTextValue)) { 
-        alert("¡Recuerde ingresar su mensaje y clave correcta! :)");
+        alert("¡Recuerde ingresar su mensaje y clave del 1 al 25! :)");
     } else {
         document.getElementById("outputtext").innerHTML=cipher.encode(keyValue,enterTextValue);
     }
 })
+
 
 //Botón decodificar
 const decodeButton = document.getElementById("decodebutton");
@@ -35,11 +37,12 @@ decodeButton.addEventListener('click', () => {
     const keyValue = document.getElementById("key").value;
     const enterTextValue = document.getElementById("entertext").value;
     if(keyValue<1 || keyValue>25 || keyValue === 0 || keyValue === null || enterTextValue ==='' || /^\s*$/.test(enterTextValue)) { 
-        alert("¡Recuerde ingresar su mensaje y clave correcta! :)");
+        alert("¡Recuerde ingresar su mensaje y clave del 1 al 25! :)");
     } else {
         document.getElementById("outputtext").innerHTML=cipher.decode(keyValue,enterTextValue);
     }
 })
+
 
 //Botón Reiniciar
 const restoreButton = document.getElementById("restorebutton");

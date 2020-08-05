@@ -1,19 +1,176 @@
-# Cifrado César
+# :lock: **SecureTalk**
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [1. ¿Qué es?](#1-¿qué-es?)
+* [2. ¿Cómo funciona?](#2-¿cómo-funciona?)
+* [3. ¿Cómo se desarrolló?](#3-¿cómo-se-desarrolló?)
+* [4. ¿Qué es el cifrado César?](#4-¿qué-es-el-cifrado-César?)
+* [5. Consideraciones técnicas](#5-consideraciones-técnicas?)
 
-***
+# 1. ¿Qué es?
 
-## 1. Preámbulo
+
+No cabe duda que la comunicación a través de internet está cada vez más presente en nuestro día a día, sin embargo, *¿cuántas veces nos hemos sentido seguros al compartir información que es confidencial para nosotros?* :worried:
+
+Ya sea desde un secreto :zipper_mouth_face: hasta una gran idea de negocio :bulb:, todos merecen ser protegidos.
+
+:point_right: Por ello en SecureTalk hemos desarrollado una web app en la que podrás intercambiar mensajes codificados :lock: mediante el uso de una clave :key: que solo tú y tu contacto conocerán.
+
+**Ingresa a [SecureTalk web app](https://marycieloparionabernaola.github.io/LIM013-cipher/src/index.html).**
+
+# 2. ¿Cómo funciona?
+
+La pantalla de inicio mostrará un mensaje de bienvenida e indicará instrucciones a tener en cuenta.
+
+Existen dos versiones: FREE y PLUS.
+
+<p align="center">
+<img src="src/images/web-app/first-screen.jpg" width="45%" height="45%">
+</p>
+
+Al presionar en "Plus SecureTalk" o "Iniciar sesión" aparecerá una pantalla de login donde podrás elegir el avatar que desees, tendrás que ingresar lo siguiente.
+
+Usuario: **user**
+
+Contraseña: **user**
+
+<p align="center">
+<img src="src/images/web-app/login-woman-screen.jpg" width="45%" height="45%">
+<img src="src/images/web-app/login-man-screen.jpg" width="45%" height="45%">
+</p>
+
+Los pasos para ambas versiones son las mismos:
+
+1. Ingresa el mensaje :email: y clave :key:
+
+2. Presiona el candado cerrado :closed_lock_with_key: para codificar/ocultar
+
+   Presiona el candado abierto :unlock: para decodificar/mostrar :eyes:
+
+3. Para borrar los datos, presiona reiniciar :repeat:
+
+<p align="center">
+<img src="src/images/web-app/free-screen.jpg" width="45%" height="45%">
+<img src="src/images/web-app/plus-screen.jpg" width="45%" height="45%">
+</p>
+
+Diferencias en las versiones:
+
+* Free: tienes hasta 10 claves.
+
+* Plus "de paga": tienes hasta 25 claves, botón de Gmail y enviado automático por Whatsapp.
+
+# 3. ¿Cómo se desarrolló?
+
+SecureTalk nace a partir de la elección del [proyecto Cipher](https://github.com/Laboratoria/LIM013-cipher) como primer trabajo encargado en el bootcamp para la promoción N°13 de Laboratoria.
+
+* Duración: dos semanas y media.
+* Metodología: Design Thinking, aplicándose las etapas: Empatizar, Definir, Idear, Prototipar y Testear durante todo el proceso.
+* Tipo de cifrado: César.
+* Lenguaje de marcado: HTML.
+* Estilos: CSS.
+* Lenguaje de programación: Vanilla Javascript.
+
+## 1. Empatizando
+
+Se aplicaron las técnicas de Brainstorming y entrevistas a 05 personas. Se determinó lo siguiente:
+
+**Usuario**: persona que se comunica a través de internet y requiere de mayor privacidad y protección de sus mensajes, la finalidad del mismo puede clasificarse en:
+
+* **Económicos**: protección de ideas, mensajes sobre dinero, transacciones y gestiones realizadas con clientes y/o socios.
+
+* **Personales**: protección de mensajes confidenciales enviados a través de las redes sociales y que podrían ser expuestos.
+
+## 2. Definiendo
+
+Se definió el problema y la solución al mismo.
+
+<p align="center">
+<img src="src/images/defining-st.jpg" width="60%" height="60%">
+</p>
+
+## 3. Ideando
+
+Se identificaron las necesidades específicas de los usuarios mediante entrevistas, las cuales se plasmaron en un [mapa de ideas](https://miro.com/app/board/o9J_koWZA1o=/) realizado en la aplicación Miro.
+
+<p align="center">
+<img src="src/images/ideating-st.jpg" width="60%" height="60%">
+</p>
+
+## 4. Prototipando
+
+Primero se realizó el bosquejo en papel:
+
+<p align="center">
+<img src="src/images/prototyped/sketch-st.jpg" width="60%" height="60%">
+</p>
+
+Se recibió el siguiente **feedback:**
+
+* Monetizar web app.
+* Agregar login para usuarios ya registrados.
+* Resaltar el botón restaurar.
+
+Luego se realizaron dos prototipos en ppt, siendo el último:
+<p align ="center">
+<img src="src/images/prototyped/secondprototype-firstscreen.jpg" width="60%" height="60%"> <img src="src/images/prototyped/secondprototype-secondscreen.jpg" width="60%" height="60%">
+</p>
+
+
+Posteriormente se realizó el [diagrama de flujo de SecureTalk](https://miro.com/app/board/o9J_koMjprg=/) en la aplicación Miro, el cual se modificó con la última iteración.
+
+<p align="center">
+<img src="src/images/flowchart/securetalk-flowchart.jpg" width="100%" height="100%">
+</p>
+
+## 5. Testeando
+
+Se realizó una constante iteración de todo el proceso.
+
+**Primer prototipo funcional publicado en GithHub pages:**
+
+<p align="center">
+<img src="src/images/prototyped-code/firstprototypedcode-firstscreen.jpg" width="30%" height="30%">
+<img src="src/images/prototyped-code/firstprototypedcode-firstscreen2.jpg" width="30%" height="30%">
+<img src="src/images/prototyped-code/firstprototypedcode-secondscreen.jpg" width="30%" height="30%">
+</p>
+
+**Primer feedback:**
+
+* La caja se mostraba grande y el usuario tenía que reducirlo manualmente.
+* La imagen de fondo no se apreciaba en la versión móbil.
+* Íconos en vez de textos en botones (codificar, decodificar y restaurar)
+* Necesidad de una explicación sobre funcionalidades en la primera pantalla o colocar una demo.
+* Necesidad de cifrar números.
+
+Se decidió realizar las mejoras y además se modificaron los estilos y estructura de la ventana de cifrado. Así como la aplicación del diseño Mobile First. Y se testeó con el usuario.
+
+**Segundo prototipo funcional publicado en GithHub pages:**
+
+<p align="center">
+<img src="src/images/prototyped-code/secondprototypedcode-firstscreen.jpg" width="30%" height="30%">
+<img src="src/images/prototyped-code/secondprototypedcode-secondscreen.jpg" width="30%" height="30%">
+</p>
+
+**Segundo feedback:**
+
+* Colocar la caja de ingreso de mensaje en la parte superior.
+* Emplear palabras como "ocultar, mostrar y reiniciar" por ser más cercanas a los usuarios y que estos sean más grandes.
+* Cambiar el ícono de escoba por uno parecido al de actualizar para el botón reiniciar.
+
+Además de las mejoras agregadas, en cuanto a colores, el usuario prefirió que estos fueran como el último prototipo realizado en ppt.
+
+**Último prototipo y feedback:**
+
+El último prototipo es similar al 
+[MVP (Producto Mínimo Viable) de este proyecto](#2-¿cómo-funciona?) presentado líneas arriba, solo se le hizo las siguientes mejoras:
+
+* Login con avatar femenino y masculino (checkbox), al inicio solo había una imagen de avatar masculino.
+* Apariencia mejorada en navegador Firefox.
+
+
+# 4. ¿Qué es el cifrado César?
 
 Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher)
 es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio
@@ -40,300 +197,54 @@ comunicación por sí mismos; el cifrado César sí puede formar parte de sistem
 más complejos de codificación, como el cifrado Vigenère, e incluso tiene
 aplicación en el sistema ROT13.
 
-## 2. Resumen del proyecto
+# 5. Consideraciones técnicas
 
-¿Qué tengo que hacer exactamente? En este proyecto crearás una aplicación
-web que servirá para que el usuario pueda cifrar y descifrar un texto indicando
-un desplazamiento específico de caracteres (_offset_).
+##### `src/index.html`
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría cifrar un mensaje y pensar en cómo debe ser esa experiencia de uso
-(qué pantallas, explicaciones, mensajes, colores, ¿marca?) etc. Algunas ideas de
-ejemplo:
+Este es el punto de entrada de la web app en HTML.
 
-* Crear claves seguras para el email.
-* Encriptar/cifrar una tarjeta de crédito.
-* Herramienta de mensajería interna de una organización de derechos humanos en
-  una zona de conflicto.
-* Mensajería secreta para parejas.
+##### `src/free-secure-talk.html`
 
-## 3. Objetivos de aprendizaje
+Esta es el HTML para la página Free.
 
-Aprenderás a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
-como tecnologías.
+##### `src/plus-secure-talk.html`
 
-### HTML y CSS
-
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de selectores de CSS.
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
-
-### DOM
-
-* [ ] Uso de selectores del DOM.
-* [ ] Manejo de eventos del DOM.
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
-(appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
-
-### JavaScript
-
-* [ ] Manipulación de strings.
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de bucles (for | for..in | for..of | while)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [ ] Declaración correcta de variables (const & let)
-
-### Testing
-
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
-
-### Estructura del código y guía de estilo
-
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
-
-### Git y GitHub
-
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-
-### UX
-
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
-* [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
-
-## 4. Consideraciones generales
-
-* El equipo de coaches te dará un tiempo sugerido e indicaciones sobre si trabajar
-  sola o en equipo. Recuerda que cada una aprende a diferente ritmo.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no
-  te preocupes, lo aprenderás durante este proyecto.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Usa este alfabeto simple (solamente mayúsculas y sin ñ):
-
-* A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-
-### Definición del producto
-
-En el README.md, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz.
-
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
-
-### Interfaz de usuario (UI)
-
-La interfaz debe permitir al usuario:
-
-* Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que
-  el cifrado desplace cada caracter.
-* Insertar un mensaje (texto) que queremos cifrar.
-* Ver el resultado del mensaje cifrado.
-* Insertar un mensaje (texto) a descifrar.
-* Ver el resultado del mensaje descifrado.
-
-### Scripts / Archivos
-
-##### `README.md`
-
-Debe contener lo siguiente:
-
-* Un título con el nombre de tu proyecto.
-* Explicar cómo descargar, instalar y ejecutar la aplicación
-  así como una introducción.
-* Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
-* La imagen final de tu proyecto.
-* Investigación UX:
-  1. Explicar quiénes son los usuarios y los objetivos en relación con el
-    producto.
-  2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
-    usuarios.
-  3. Luego colocarás la foto de tu primer prototipo en papel.
-  4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
-  5. Imagen del prototipo final.
-
-##### `src/index.html` 
-
-  Este es el punto de entrada a tu aplicación. Este archivo
-  debe contener tu _markup_ (HTML) e incluir el CSS y JavaScript necesario.
+Esta es el HTML para la página Plus.
   
 ##### `src/cipher.js`
-  Acá debes implementar el objeto `cipher`, el cual ya está
-  _exportado_ en el _boilerplate_. Este objeto (`cipher`) debe contener dos
-  métodos:
-  - `cipher.encode(offset, string)`: `offset` es el número de posiciones que
-    queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
-    que queremos cifrar.
-  - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
-    queremos mover a la izquierda en el alfabeto y `string` el mensaje
-    (texto) que queremos descifrar.
-##### `src/index.js`
-  Acá debes escuchar eventos del DOM, invocar `cipher.encode()`
-  o `cipher.decode()` según sea necesario y actualizar el resultado en la UI.
+
+Aquí está implementado el objeto `cipher`, el cual contiene lo siguiente:
+
+- `cipher.encode(offset, string)`: `offset` es el número de posiciones que queremos mover a la derecha en el alfabeto y `string` el mensaje (texto) que queremos cifrar.
+- `cipher.decode(offset, string)`: `offset` es el número de posiciones que queremos mover a la izquierda en el alfabeto y `string` el mensaje (texto) que queremos descifrar.
+
+##### `src/free.js`
+
+Aquí escuchamos eventos del DOM e invocamos `cipher.encode()` o `cipher.decode()` mediante la importación del objeto `cipher` para `src/free-secure-talk.html`.
+
+##### `src/plus.js`
+
+Aquí escuchamos eventos del DOM e invocamos `cipher.encode()` o `cipher.decode()` mediante la importación del objeto `cipher` y añadimos otras funcionalidades propias para `src/plus-secure-talk.html`.
+
 ##### `test/cipher.spec.js`
-  Este archivo contiene algunos tests de ejemplo y acá
-  tendrás que implementar los tests para `cipher.encode()` y `cipher.decode()`.
 
-## 6. Hacker edition
+Se implementaron tests para `cipher.encode()` y `cipher.decode()`.
 
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
+Los tests unitarios debían cubrir un mínimo del 70% de _statements_, _functions_ y _lines_, y un mínimo del 50% de _branches_ aplicándose los mismos con el comando `npm test`.
 
-La descripción general de este proyecto no menciona qué pasaría con las letras
-minúsculas y otros caracteres (como espacios, puntuación, ñ, ...). El
-boilerplate incluye algunos tests (comentados en principio) que puedes usar como
-punto de partida para implementar el soporte para estos casos.
+Los resultados del test fueron los siguientes:
 
-Tampoco se menciona qué pasaría si el offset fuera negativo. Como parte del
-hacker edition te invitamos a explorar también esta caso por tu cuenta.
+<p align="center">
+<img src="src/images/test-npm.jpg" width="70%" height="70%">
+</p>
 
-## 7. Consideraciones técnicas
+**Nota**:
 
-La lógica del proyecto debe estar implementada completamente en JavaScript. En
-este proyecto NO está permitido usar librerías o frameworks, solo JavaScript puro
-también conocido como Vanilla JavaScript.
+* La lógica del proyecto está implementada commpletamente en JavaScript. En
+este proyecto NO estaba permitido usar librerías o frameworks, solo JavaScript puro también conocido como Vanilla JavaScript.
 
-No se debe utilizar la _pseudo-variable_ `this`.
+* No se utilizó la _pseudo-variable_ `this`.
 
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_
-y _lines_, y un mínimo del 50% de _branches_. El _boilerplate_ ya contiene el
-setup y configuración necesaria para ejecutar los tests (pruebas) así como _code
-coverage_ para ver el nivel de cobertura de los tests usando el comando `npm
-test`.
+- - -
 
-El _boilerplate_ incluye tests (pruebas) de ejemplo como punto de partida.
-
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio que contiene el _boilerplate_.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias y tests de ejemplo:
-
-```text
-./
-├── .babelrc
-├── .editorconfig
-├── .eslintrc
-├── .gitignore
-├── README.md
-├── package.json
-├── src
-│   ├── cipher.js
-│   ├── index.html
-│   ├── index.js
-│   └── style.css
-└── test
-    ├── .eslintrc
-    └── cipher.spec.js
-```
-
-El _boilerplate_ incluye tareas que ejecutan [eslint](https://eslint.org/) y
-[htmlhint](https://github.com/yaniswang/HTMLHint) para verificar el `HTML` y
-`JavaScript` con respecto a una guías de estilos. Ambas tareas se ejecutan
-automáticamente antes de ejecutar las pruebas (tests) cuando usamos el comando
-`npm run test`. En el caso de `JavaScript` estamos usando un archivo de
-configuración de `eslint` que se llama `.eslintrc` que contiene un mínimo de
-información sobre el parser que usar (qué version de JavaScript/ECMAScript), el
-entorno (browser en este caso) y las [reglas recomendadas (`"eslint:recommended"`)](https://eslint.org/docs/rules/).
-En cuanto a reglas/guías de estilo en sí,
-usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
-
-***
-
-## 8. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
-  condiciones, algo como [Atom](https://atom.io/) o
-  [Code](https://code.visualstudio.com/).
-2. Para ejecutar los comandos a continuación necesitarás una :shell:
-  [UNIX Shell](https://github.com/Laboratoria/bootcamp/tree/master/topics/shell),
-  que es un programita que interpreta líneas de comando (command-line
-  interpreter) así como tener [git](https://github.com/Laboratoria/bootcamp/tree/master/topics/scm/01-git)
-  instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS,
-  ya tienes una _shell_ (terminal) instalada por defecto (y probablemente `git`
-  también). Si usas Windows puedes usar la versión completa de [Cmder](https://cmder.net/)
-  que incluye [Git bash](https://git-scm.com/download/win) y si tienes Windows 10
-  o superior puedes usar [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-3. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-  [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-  tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-  en ese repo. La otra integrante del equipo deber hacer un fork **del
-  repositorio de su compañera** y
-  [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-  hacia el mismo.
-4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-  tu _fork_ a tu computadora (copia local).
-5. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-  asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-6. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-  pruebas unitarias (unit tests) con el comando `npm test`.
-7. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-8. A codear se ha dicho! :rocket:
-
-### Recursos y temas relacionados
-
-A continuación un video de Michelle que te lleva a través de la fórmula
-matemática del Cifrado César y un par de cosas más que debes saber para
-resolver este proyecto. ¡Escúchala con detenimiento y sigue sus consejos! :)
-
-[![tips caesar cipher](https://img.youtube.com/vi/zd8eVrXhs7Y/0.jpg)](https://www.youtube.com/watch?v=zd8eVrXhs7Y)
-
-[Link](https://www.youtube.com/watch?v=zd8eVrXhs7Y)
-
-También una metodología para empezar a desarrollar tareas con JavaScript:
-
-[![Resolución de problemas con JavaScript](http://i3.ytimg.com/vi/lYfEmhLmu7A/hqdefault.jpg)](https://www.youtube.com/watch?v=lYfEmhLmu7A)
-
-[Link](https://www.youtube.com/watch?v=lYfEmhLmu7A)
-
-Terminal y shell de UNIX:
-
-[![Playlist de Terminal y shell de UNIX](https://img.youtube.com/vi/GB35Eyb-J4c/0.jpg)](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
-
-[Link](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
-
-Control de versiones y trabajo colaborativo con Git y GitHub:
-
-[![Playlist de control de versiones y trabajo colaborativo](https://img.youtube.com/vi/F1EoBbvhaqU/0.jpg)](https://www.youtube.com/playlist?list=PLiAEe0-R7u8k9o3PbT3_QdyoBW_RX8rnV)
-
-[Link](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
-
-Diseño de experiencia de usuario (User Experience Design):
-
-* Ideación
-* Prototipado (sketching)
-* Testeo e Iteración
-
-Desarrollo Front-end:
-
-* Valores
-* Tipos
-* Variables
-* Control de flujo
-* Tests unitarios
-* [Aprende más sobre `charCodeAt()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt)
-* [Aprende más sobre `String.fromCharCode()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode)
-* [Aprende más sobre `ASCII`](http://conceptodefinicion.de/ascii/)
-* [Documentación de NPM](https://docs.npmjs.com/)
-
-Organización del Trabajo:
-
-* [Metodologías Ágiles](https://www.youtube.com/watch?v=v3fLx7VHxGM)
-* [Scrum en menos de 2 minutos](https://www.youtube.com/watch?v=TRcReyRYIMg)
-* [Scrum en Detalle](https://www.youtube.com/watch?v=nOlwF3HRrAY&t=297s). No
-  esperamos que hagas todo eso desde este proyecto. Iremos profundizando poco a
-  poco a lo largo del -_bootcamp_.
-* [Guía para Cifrado César](https://docs.google.com/presentation/d/e/2PACX-1vTQ7-8LZDHrT4Y6AOBN72Nkfz1eJAeseBHpcHX8BSq0aFCFoZmuMjluMeyFNgK9ISKxTz0H03yGfJiT/pub?start=false&loop=false&delayms=60000)
-
+## Muchas gracias :)

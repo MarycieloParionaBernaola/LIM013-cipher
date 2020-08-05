@@ -1,15 +1,11 @@
-
 body {
     background-color: #B4E6DA;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
 }
 
-.dark{
-    background-color: black;
-    color: white; 
-    margin: auto; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#plusscreen {
+    display: none; 
 }
 
 .screen {
@@ -37,6 +33,7 @@ header {
     font-weight: bold;
 }
 
+
 .login {
     outline: none;
     transition-duration: 0.4s; 
@@ -51,6 +48,54 @@ header {
     vertical-align: 10px;
 }
 
+
+.switch-button {
+    display: inline-block;
+    margin-left: 430px;
+    margin-top: 10px; 
+}
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+.switch-button .switch-button__label {
+    background-color: var(--color-yellow);
+    width: 4rem;
+    height: 2rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-grey);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: var(--color-green);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(2rem);
+}
+
+
+.form {
+    background-color: white;
+    color: black;
+    vertical-align: middle;
+    height: 20px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 19px;
+    border: #44C1A3 1px solid; 
+    padding: 15px;
+    width: 350px;
+}
 
 
 .content {
@@ -86,24 +131,6 @@ header {
     font-weight:bold;
 }
 
-.bluebtn {
-    background-color: rgb(6, 126, 182);
-}
-
-.enjoybtn {
-    background-color: rgb(168, 168, 168);
-}
-
-.plus {
-    display: block; 
-    float: right;
-    margin-right: 20px;
-    margin-bottom: 15px; 
-}
-
-.enjoy {
-    padding: 20px; 
-}
 
 .btn {
     outline: none;
@@ -118,6 +145,43 @@ header {
 }
 
 
+.bluebtn {
+    background-color: rgb(6, 126, 182);
+}
+
+
+.enjoybtn {
+    background-color: rgb(168, 168, 168);
+}
+
+
+.plus {
+    display: block; 
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 15px; 
+}
+
+.enjoy {
+    padding: 20px; 
+}
+
+
+.restore {
+    background-color: #FFC000;
+}
+
+
+.encode {
+    background-color:  #FF5050;
+}
+
+
+.decode {
+    background-color: rgb(67, 182, 128);
+}
+
+
 .box {
     background-color: white;
     color: black;
@@ -126,7 +190,10 @@ header {
     border-radius: 20px;
     outline: none;
     font-size: 19px;
-    border-color: #44C1A3; 
+    border: 1px solid rgb(68, 193, 163); 
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     resize: none;
     padding: 20px;
     
@@ -145,18 +212,6 @@ header {
 }
 
 
-.leftbox {
-    display:inline-block; 
-    margin:0.7em; 
-}
-
-
-.right {
-    display:inline-block; 
-    vertical-align: middle;
-    align-items: center;
-}
-
 .key {
     display:block; 
     border-radius: 5px;
@@ -164,6 +219,7 @@ header {
     border: rgb(6, 126, 182) 1px solid;
     text-align: center;
     font-size: 20px;
+    -moz-appearance:textfield;
 }
 
 .key::-webkit-inner-spin-button, 
@@ -183,17 +239,6 @@ header {
     height: 30px;
 }
 
-.restore {
-    background-color: #FFC000;
-}
-
-.encode {
-    background-color:  #FF5050;
-}
-
-.decode {
-    background-color: rgb(67, 182, 128);
-}
 
 .socialmedia {
     display:block; 
@@ -205,6 +250,27 @@ header {
     height: 43px;
 }
 
+
+a {
+    text-decoration:none;
+    color: #FF5050;
+    font-weight: bold;
+}
+
+
+.leftbox {
+    display:inline-block; 
+    margin:0.7em; 
+}
+
+
+.right {
+    display:inline-block; 
+    vertical-align: middle;
+    align-items: center;
+}
+
+
 .center {
     text-align: center;
     justify-content: center;
@@ -212,8 +278,14 @@ header {
     vertical-align: center;
 }
 
+
 .justify {
 text-align: justify;
+}
+
+
+.margint{
+    margin-top: 1em; 
 }
 
 
@@ -228,63 +300,8 @@ text-align: justify;
     margin-bottom: 1em;
 }
 
-a {
-    text-decoration:none;
-    color: #FF5050;
-    font-weight: bold;
-}
 
-.form {
-    background-color: white;
-    color: black;
-    vertical-align: middle;
-    height: 20px;
-    border-radius: 20px;
-    outline: none;
-    font-size: 19px;
-    border: #44C1A3 1px solid; 
-    padding: 15px;
-    width: 350px;
-}
 
-.margint{
-    margin-top: 1em; 
-}
 
-#plusscreen {
-    display: none; 
-}
 
-.switch-button {
-    display: inline-block;
-    margin-left: 430px;
-    margin-top: 10px; 
-}
-.switch-button .switch-button__checkbox {
-    display: none;
-}
-.switch-button .switch-button__label {
-    background-color: var(--color-yellow);
-    width: 4rem;
-    height: 2rem;
-    border-radius: 3rem;
-    display: inline-block;
-    position: relative;
-}
-.switch-button .switch-button__label:before {
-    transition: .2s;
-    display: block;
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    background-color: var(--color-button);
-    content: '';
-    border-radius: 50%;
-    box-shadow: inset 0px 0px 0px 1px var(--color-grey);
-}
-.switch-button .switch-button__checkbox:checked + .switch-button__label {
-    background-color: var(--color-green);
-}
-.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
-    transform: translateX(2rem);
-}
+
