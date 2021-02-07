@@ -1,57 +1,87 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="utf-8">
-    <!--Esta línea lo convierte en responsive-->
-    <meta name="viewport" content="width=device-width">
-    <title>SecureTalk</title>
-    <link rel="stylesheet" href="style.css"/>
-    <!--Para agregar ícono en la pestaña del navegador-->
-    <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico">
-  </head>
-
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>SecureTalk</title>
+      <link rel="stylesheet" href="style.css"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
 
   <body>
-    
-    <div class="screen">
-
-      <div class="header">
-        <header>SecureTalk</header>
-        <a href="plus-secure-talk.html" title="Iniciar sesión" class="login">Iniciar sesión</a>
-      </div>
-
-      <div class="main content">
-        
-        <h2>¡Bienvenid@!</h2> 
-        <p>Con SecureTalk podrás mantener seguras tus conversaciones a través del intercambio de mensajes codificados con tus contactos.</p>
-        <h4>¿Cómo funciona?</h4>
-        <table align="center" class="justify">
-          <tr>
-            <td><input type="number" class="key smallk" value="9" readonly></td>
-            <td>Coloca tu clave</td>    
-          </tr>
-          <tr>
-            <td><img class="mainbtn encode" src="images/buttons/encode-button.jpg" height="30px"></td>        
-            <td>Oculta tu mensaje</td>
-          </tr>
-          <tr>
-            <td><img class="mainbtn decode" src="images/buttons/decode-button.jpg" height="30px"></td>        
-            <td>Muestra el mensaje</td>
-          </tr>
-          <tr>
-            <td><img class="mainbtn restore" src="images/buttons/restore-button.jpg" height="30px"></td>
-            <td>Reinicia</td>
-          </tr>
-        </table>
-        <p><strong>Recuerda</strong> compartir la clave con tu contacto.</p> 
-        <div class="enjoy">
-          <a href="free-secure-talk.html" title="Free SecureTalk" class="linkbtn enjoybtn btn">Free SecureTalk</a>
-          <a href="plus-secure-talk.html" title="Plus SecureTalk" class="linkbtn bluebtn btn">Plus SecureTalk</a>
+      <header>
+        <a href="index.html" title="SecureTalk"><h1>SecureTalk</h1></a>
+        <div class="navbar">
+          <a href="#about" title="ABOUT">ABOUT</a>
+          <a href="#howDoesItWork" title="HOW DOES IT WORK?">HOW DOES IT WORK?</a>
+          <a href="#trySecureTalk" title="TRY SECURETALK">TRY SECURETALK</a>
+          <a href="#author" title="AUTHOR">AUTHOR</a>
         </div>
+      </header>
+
+      <main>
+        <div class="main-view">
+          <div id="about"class="all-screen">
+            <section>
+              <h2>About</h2>         
+              <p>Do you need more privacy and protect your messages whether they are about business, brilliant ideas or simply confidential?</p>
+              <br>
+              <p>SecureTalk keeps your conversations secure by encoding your messages, which only your contact and you will be able to decode using a key and share them directly through WhatsApp.</p>
+              <br>
+              <p>Are you ready to <a href="#trySecureTalk" class="link-green">start</a>?</p>
+              <span class="lock"><i class="fas fa-lock"></i></span>
+            </section>
+          </div>
         
-      </div>
-      
-    </div>
+          <div id="howDoesItWork" class="all-screen">
+            <section>
+              <h2>How does it work?</h2>
+              <ol>
+                <li>Enter a <b>key (from 1 to 25)</b> or enter the one your contact sent you in the box to the right.</li>
+                <li>Enter your message if you want to encode or paste the encoded message of your contact.</li>
+                <li>Press <span class="encode-text"><strong>encode</strong></span> to hide your message or <span class="decode-text"><strong>decode</strong></span> to display the content of your contact's message.</li>
+                <li>If you have an encoded message, send it to your contact by pressing the WhatsApp icon on the right.</li>
+                <li>If you clear the entered values press <span class="restart-text"><strong>restart</strong></span>.</li>
+              </ol>
+              <p>👉 Remember share the key with your contact!</p> 
+              <div class="button-try"><a href="#trySecureTalk">Try SecureTalk</a></div>
+              <span class="lock"><i class="fas fa-lock"></i></span>
+            </section>
+          </div>
+
+          <div id= "trySecureTalk" class="all-screen">
+            <section>
+              <h2>Try SecureTalk</h2>
+              <div class="top-grid">
+                <textarea id="entertext" class="box btop" placeholder="Enter your message here" spellcheck="false"></textarea>
+                <input type="number" id="key" class="key" placeholder="Your key" min="1" max="25" autocomplete="off">
+                <button type="button" id="encodebutton" class="btn encode" title="ENCODE"><i class="fas fa-lock"></i>ENCODE</button>
+                <button type="button" id="decodebutton" class="btn decode" title="DECODE"><i class="fas fa-unlock"></i>DECODE</button>
+                <button type="button" id="restartbutton" class="btn restart" title="RESTART"><i class="fas fa-undo-alt"></i>RESTART</button>
+              </div>   
+              <div class="bottom-grid">
+                <textarea id="outputtext" class="box bbottom" placeholder="Your converted message will appear here" readonly></textarea>
+                <div class="icons">
+                  <a id="sendwhatsapp" title="Share by WhatsApp" target="_blank"><img src="images/icons/whatsapp-icon.jpg"></a>
+                  <a title="Share by Email" href="mailto:user@gmail.com?Subject=Encode%20message%20de%20SecureTalk" target="_blank"><img src="images/icons/gmail-icon.jpg"></a>
+                </div>
+              </div>
+              <a href="#howDoesItWork" class="link-green right">How does it work?</a>
+            </section>
+          </div>
+
+          <div id="author" class="all-screen">
+            <section>
+              <h2>Author</h2>
+              <p>Marycielo Pariona Bernaola is a Front-end Developer from Laboratoria and Food Scientist & Technologist from San Marcos University.</p>
+              <p>SecureTalk was her first project during her studies at Laboratoria bootcamp.</p>
+              <p>If you want to communicate with her <a href="https://api.whatsapp.com/send?phone=51963069594&text=Hi%20Marycielo!%20I%20am%20interested%20in%20your%20web%20app%20:)." target="_blank" class="link-green">click here</a>.</p>      
+              <span class="lock"><i class="fas fa-lock"></i></span>
+            </section>
+          </div>  
+        </div>
+
+      </main>
+      <script src="main.js" type="module"></script>
   </body>
 </html>
