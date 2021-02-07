@@ -146,7 +146,6 @@ ol {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.1rem;
-    letter-spacing: 0.2rem;
 }
 
 .top-grid {
@@ -275,4 +274,92 @@ a img {
     display: flex;
     justify-content: flex-end;
     margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 0rem;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .navbar {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    
+    .navbar a {
+        padding: 0.2rem 0.2rem 0.7rem 0.2rem;
+        font-size: 0.7rem;
+    }
+    
+    h1 {
+        font-size: 2.3rem;
+        padding: 0rem;
+    }
+    
+    section {
+     width: 90%;
+     padding: 1rem;
+     line-height: 1.5rem
+    } 
+
+    section p, ol li, .btn {
+        font-size: 0.7rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.3rem;
+    }
+    
+    .lock {
+        font-size: 1rem;
+    }
+    
+    ol {
+        list-style-type: none;
+        text-align: center;
+    }
+    
+    .button-try a {
+        font-size: 0.7rem;
+    }
+
+    .box {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+
+    a img {
+        width: 30px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .key {
+        font-size: 0.7rem;
+        width: fit-content;
+    }
+
+    .top-grid {
+        grid-template-columns: 6fr 1fr;
+        gap: 5px;
+    }
+
+    .btop {
+        height: 140px;
+    }
+
+    .btn {
+        width: fit-content;
+        border-radius: 50%;
+        padding: 0.1rem;
+    }
 }

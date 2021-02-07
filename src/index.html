@@ -39,13 +39,12 @@
               <ol>
                 <li>Enter a <b>key (from 1 to 25)</b> or enter the one your contact sent you in the box to the right.</li>
                 <li>Enter your message if you want to encode or paste the encoded message of your contact.</li>
-                <li>Press <span class="encode-text"><strong>encode</strong></span> to hide your message or <span class="decode-text"><strong>decode</strong></span> to display the content of your contact's message.</li>
+                <li>Press <i class="fas fa-lock"></i> <span class="encode-text"><strong>encode</strong></span> to hide your message or <i class="fas fa-unlock"></i> <span class="decode-text"><strong>decode</strong></span> to display the content of your contact's message.</li>
                 <li>If you have an encoded message, send it to your contact by pressing the WhatsApp icon on the right.</li>
-                <li>If you clear the entered values press <span class="restart-text"><strong>restart</strong></span>.</li>
+                <li>If you clear the entered values press <i class="fas fa-undo-alt"></i> <span class="restart-text"><strong>restart</strong></span>.</li>
               </ol>
               <p>👉 Remember share the key with your contact!</p> 
               <div class="button-try"><a href="#trySecureTalk">Try SecureTalk</a></div>
-              <span class="lock"><i class="fas fa-lock"></i></span>
             </section>
           </div>
 
@@ -54,10 +53,10 @@
               <h2>Try SecureTalk</h2>
               <div class="top-grid">
                 <textarea id="entertext" class="box btop" placeholder="Enter your message here" spellcheck="false"></textarea>
-                <input type="number" id="key" class="key" placeholder="Your key" min="1" max="25" autocomplete="off">
-                <button type="button" id="encodebutton" class="btn encode" title="ENCODE"><i class="fas fa-lock"></i>ENCODE</button>
-                <button type="button" id="decodebutton" class="btn decode" title="DECODE"><i class="fas fa-unlock"></i>DECODE</button>
-                <button type="button" id="restartbutton" class="btn restart" title="RESTART"><i class="fas fa-undo-alt"></i>RESTART</button>
+                <input type="number" id="key" class="key" placeholder="Key" min="1" max="25" autocomplete="off">
+                <button type="button" id="encodebutton" class="btn encode" title="ENCODE"><i class="fas fa-lock"></i><span class="hide">ENCODE</span></button>
+                <button type="button" id="decodebutton" class="btn decode" title="DECODE"><i class="fas fa-unlock"></i><span class="hide">DECODE</span></button>
+                <button type="button" id="restartbutton" class="btn restart" title="RESTART"><i class="fas fa-undo-alt"></i><span class="hide">RESTART</span></button>
               </div>   
               <div class="bottom-grid">
                 <textarea id="outputtext" class="box bbottom" placeholder="Your converted message will appear here" readonly></textarea>
